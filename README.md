@@ -33,8 +33,9 @@ It will:
 
 **Creating the infrastructure**
 
-1. Create a file at the root of the repository called `terraform.tfvars`
-2. In this file add entries for all the variables defined in the `vars.tf` file. This should look something like the below but with other values for `project_id` and `account_email`
+1. Git clone this respository locally
+2. Create a file at the root of the repository called `terraform.tfvars`
+3. In this file add entries for all the variables defined in the `vars.tf` file. This should look something like the below but with other values for `project_id` and `account_email`
 
 ```terraform
 project_id    = "my-gcp-project-name"
@@ -42,11 +43,11 @@ region        = "us-central1"
 zone          = "us-central1-c"
 account_email = "email-used-to-create-gcp-account@gmail.com"
 ```
-3. Type `gcloud auth application-default login` in your terminal and follow the prompts
-4. When in the root of this repository type `terraform init` into your terminal
-5. Then type `terraform fmt` in your terminal for good measure
-6. Type `terraform plan -out "tfplan1"` into your terminal
-7. If you are happy with the plan that Terraform shows it's time to create the infrastructure using `terraform apply "tfplan1"`
+4. Type `gcloud auth application-default login` in your terminal and follow the prompts
+5. When in the root of this repository type `terraform init` into your terminal
+6. Then type `terraform fmt` in your terminal for good measure
+7. Type `terraform plan -out "tfplan1"` into your terminal
+8. If you are happy with the plan that Terraform shows it's time to create the infrastructure using `terraform apply "tfplan1"`
 
 This should have create a dataset, table and a service account that can be used by estuary to extract data from.
 
@@ -106,7 +107,7 @@ Creating a capture
 
 Creating a Materialization
 
-- Click **Materializations** on the left hand side burger menu and then click **+ New Materialization*
+- Click **Materializations** on the left hand side burger menu and then click **+ New Materialization**
 - Choose **Google Sheets** as the option
 - Now you will need to create a Google Sheet in your account for the data from the BigQuery capture to be loaded into.
 - Once created, copy the URL up to and including **/edit** and paste it into the **Spreadsheet URL** box in the Estuary UI.
