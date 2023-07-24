@@ -28,6 +28,7 @@ It will:
 - Terraform installed on your local machine
 - A Google Cloud Platform account on the free tier or with billing enabled.
 - A Google account with access to Google Sheets
+- [gcloud CLI](https://cloud.google.com/sdk/docs/install)
 
 ### Instructions
 
